@@ -49,7 +49,11 @@ function App() {
         <button>Find a recipe</button>
       </div>
       {myRecipe.map((element) => (
-        <MyRecipeComponent />
+        <MyRecipeComponent
+          label={element.recipe.label}
+          image={element.recipe.image}
+          calories={element.recipe.calories}
+        />
       ))}
     </div>
   );
