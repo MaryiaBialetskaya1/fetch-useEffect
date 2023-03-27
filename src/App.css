@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+body {
+  font-family: "Open Sans", sans-serif;
+}
 video {
   object-fit: cover;
   width: 100vw;
@@ -9,6 +13,7 @@ video {
 }
 .App {
   background-color: rgba(255, 255, 255, 0.5);
+  text-align: center;
 }
 .container {
   display: flex;
@@ -24,4 +29,27 @@ video {
   background-color: transparent;
   margin-left: 0px;
   box-shadow: inset 0px 0px 0px 4px #ddd6e8;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+}
+ul {
+  list-style: none;
+  padding: 0;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+}
+li {
+  display: block;
+  padding: 0.4em 0.4em 0.4em 0.8em;
+  margin: 0.5em 0 0.5em 2.5em;
+  background: #ddd6e8;
+}
+button {
+  background-color: #dbecc4;
+  border: none;
+  border-radius: 12px;
+  margin-top: 10px;
 }
