@@ -12,17 +12,16 @@ function App() {
   const [wordSubmited, setwordSubmited] = useState("avacado");
 
   useEffect(() => {
+    const getRecipe = async () => {
+      const responce = await fetch(
+        `https://api.edamam.com/api/recipes/v2?type=public&q=${wordSubmited}&app_id=${MY_ID}&app_key=${MY_KEY}`
+      );
+      const data = await responce.json();
+      setMyRecipe(data.hits);
+      console.log(data.hits);
+    };
     getRecipe();
   }, [wordSubmited]);
-
-  const getRecipe = async () => {
-    const responce = await fetch(
-      `https://api.edamam.com/api/recipes/v2?type=public&q=${wordSubmited}&app_id=${MY_ID}&app_key=${MY_KEY}`
-    );
-    const data = await responce.json();
-    setMyRecipe(data.hits);
-    console.log(data.hits);
-  };
 
   const myRecipeSearch = (e) => {
     setMySearch(e.target.value);
